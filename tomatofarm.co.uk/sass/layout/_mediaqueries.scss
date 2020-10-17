@@ -1,0 +1,55 @@
+@media all and (max-width: 740px) {
+  .hero-message a {
+    display: none;
+  }
+
+  h1.hero-title {
+    font-size: 48px;
+  }
+
+  .menu-logo {
+    padding: 0px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu-container {
+    margin: 0px;
+    width: 100%;
+    li {
+      float: none;
+      margin: 0px;
+
+      a {
+        padding: 3px 0 6px 0;
+      }
+    }
+    padding: 0px;
+  }
+}
+@media all and (max-width: 480px) {
+  .page-header-title {
+    font-size: 40px;
+  }
+}
+
+@media all and (max-width: 420px) {
+  h1.hero-title {
+    font-size: 20px;
+  }
+
+  .hero-message h2 {
+    font-size: 14px;
+  }
+}
+
+@media all and (max-width: 346px) {
+  .action a:before {
+    bottom: 20px;
+  }
+}
+@media all and (max-width: 280px) {
+  .page-header-title {
+    font-size: 20px;
+  }
+}

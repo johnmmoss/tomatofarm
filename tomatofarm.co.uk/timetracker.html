@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time Tracker - tomatofarm.co.uk</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  </head>
+  <body>
+    <div class="menu-wrapper">
+      <div class="menu-logo">
+        <img src="images/logo.png" />
+      </div>
+      <div class="menu-container">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="howitworks.html">How it Works</a></li>
+          <li><a href="timetracker.html">Time Tracker</a></li>
+          <li><a href="history.html">History</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="page-header">
+      <div class="page-header-title">Time Tracker</div>
+    </div>
+    <div class="content">
+      <div class="timer-wrapper">
+        <div class="timer">
+          <input type="text" id="timerMinutes" name="timerMinutes" value="25"></input>
+          <input
+            type="text"
+            id="timerSeconds"
+            readonly
+            name="timerSeconds"
+            value="00"
+          ></input>
+          <span id="timer-label-minutes">mins</span>
+          <span id="timer-label-seconds">secs</span>
+        </div>
+      </div>
+    </div>
+      <div class="timer-buttons">
+        <input class="secondary-timer-button" type="button" id="resetButton" value="Reset" />
+        <input class="timer-button" type="button" id="startButton" value="START" />
+      </div>
+
+    <script src="js\timer.js"></script>
+  </body>
+</html>

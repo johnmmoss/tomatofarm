@@ -1,0 +1,139 @@
+.timer-wrapper {
+  height: 30%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer-wrapper:before {
+  content: "";
+  background-image: url(images/timer-tomato.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.6;
+  z-index: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+}
+
+.timer-buttons {
+  padding: 10px 5px;
+  background-color: #cbe986;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.timer {
+  border: 3px solid $dark-green;
+  padding: 10px 20px 10px 20px;
+  margin-top: 15px;
+  border-radius: 10px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.timer-button {
+  background-color: $medium-green;
+  border: 3px solid red;
+  border-radius: 20px;
+  padding: 10px 20px 10px 20px;
+  color: white;
+  width: 200px;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+
+.timer-button:hover {
+  background-color: $dark-green;
+  transition: 2s;
+  cursor: pointer;
+}
+
+.secondary-timer-button:hover {
+  cursor: pointer;
+}
+
+.secondary-timer-button {
+  background-color: $dark-green;
+  border: 3px solid $dark-green;
+  border-radius: 20px;
+  padding: 10px 20px 10px 20px;
+  color: #fff;
+  width: 200px;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+
+.active-timer-button {
+  background-color: red;
+  border: 3px solid $dark-green;
+  border-radius: 20px;
+  padding: 10px 20px 10px 20px;
+  color: white;
+  width: 200px;
+  letter-spacing: 1px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.active-timer-button:hover {
+  cursor: pointer;
+}
+
+.timer input {
+  width: 125px;
+  padding: 3%;
+  font-family: "Arial, Helvetica, sans-serif";
+  font-size: 80px;
+  text-align: center;
+  background-color: fff;
+  border: none;
+  letter-spacing: 6px;
+  color: #106d16;
+  position: relative;
+}
+
+.timer:after {
+  content: ":";
+  font-family: "Arial, Helvetica, sans-serif";
+  font-size: 40px;
+  color: silver;
+  position: absolute;
+  right: 143px;
+  z-index: 3;
+}
+
+.timer {
+  span {
+    position: absolute;
+    bottom: 15px;
+    left: 200px;
+    color: silver;
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  #timer-label-minutes {
+    left: 80px;
+  }
+  #timer-label-seconds {
+    left: 175px;
+  }
+}
+#startButton {
+  margin-left: 2%;
+}
+
+#resetButton {
+  margin-right: 2%;
+}
