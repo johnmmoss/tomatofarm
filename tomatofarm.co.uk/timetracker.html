@@ -11,11 +11,13 @@
     <link rel="manifest" href="/site.webmanifest" />
   </head>
   <body>
+    <div class="page-container">
     <div class="menu-wrapper">
       <div class="menu-logo">
         <img src="images/logo.png" />
       </div>
       <div class="menu-container">
+      <span>&#9776;</span> 
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="howitworks.html">How it Works</a></li>
@@ -28,7 +30,7 @@
     <div class="page-header">
       <div class="page-header-title">Time Tracker</div>
     </div>
-    <div class="content">
+    <div class="content content-foot">
       <div class="timer-wrapper">
         <div class="timer">
           <input type="text" id="timerMinutes" name="timerMinutes" value="25"></input>
@@ -44,11 +46,13 @@
         </div>
       </div>
     </div>
+      <div class="timer-buttons-wrapper">
       <div class="timer-buttons">
         <input class="secondary-timer-button" type="button" id="resetButton" value="Reset" />
         <input class="timer-button" type="button" id="startButton" value="START" />
       </div>
-
+      </div>
+    </div>
     <script src="js\timer.js"></script>
   </body>
 </html>

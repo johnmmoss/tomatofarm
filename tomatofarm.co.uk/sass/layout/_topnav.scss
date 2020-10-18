@@ -11,13 +11,13 @@
 }
 
 .menu-container {
-  width: 700px;
+  width: 600px;
   padding-top: 13px;
   float: left;
   margin-left: 10%;
-}
+  position: relative;
+  z-index: 10;
 
-.menu-container {
   ul {
     list-style-type: none;
     margin: 0;
@@ -45,5 +45,15 @@
   li a:hover {
     transition: 2s;
     text-decoration: underline;
+  }
+
+  span {
+    display: none;
+    font-size: 25px;
+    padding: 2px;
+  }
+
+  span:hover {
+    cursor: pointer;
   }
 }

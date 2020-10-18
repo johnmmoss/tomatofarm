@@ -1,4 +1,115 @@
-@media all and (max-width: 740px) {
+@media all and (max-height: 825px) {
+  .timer-wrapper:before {
+    height: 200px;
+    background-size: 200px;
+  }
+  .timer-wrapper {
+    height: 200px;
+  }
+}
+@media all and (max-height: 700px) {
+  .content-foot {
+    padding-bottom: 10%;
+  }
+  .content {
+    margin-top: 70px;
+  }
+  .timer-buttons-wrapper {
+    height: 10%;
+  }
+
+  .timer-buttons input {
+    width: 49%;
+    border: none;
+    border-radius: 0px;
+    padding: 15px 0;
+    margin: 0px;
+    height: 100%;
+  }
+  #startButton {
+    margin: 0px;
+    border-left: 1px solid white;
+  }
+  #resetButton {
+    margin: 0px;
+  }
+}
+@media all and (max-height: 640px) {
+  .timer-buttons input {
+    padding: 10px 0px;
+  }
+}
+@media all and (max-height: 595px) {
+  .content {
+    margin-top: 40px;
+  }
+}
+@media all and (max-height: 595px) {
+  .content {
+    margin-top: 30px;
+  }
+}
+@media all and (max-height: 500px) {
+  .content {
+    margin-top: 10px;
+  }
+  .timer-buttons {
+    padding-top: 3px;
+  }
+}
+@media all and (max-height: 460px) {
+  .timer-wrapper:before {
+    height: 150px;
+    background-size: 150px;
+  }
+  .timer-wrapper {
+    height: 150px;
+  }
+}
+@media all and (max-width: 797px) {
+  .menu-container {
+    width: 100px;
+    margin: 0px;
+    float: right;
+    text-align: right;
+
+    color: $dark-green;
+    margin-top: -50px;
+    margin-right: 10px;
+
+    li {
+      float: none;
+      margin: 0px;
+
+      a {
+        padding: 13px 0 6px 0;
+      }
+    }
+    padding: 0px;
+  }
+
+  /*** Hide Menu by making it 0 height... ***/
+  .menu-container span {
+    display: inline-block;
+  }
+  .menu-container ul {
+    transform: scale(1, 0);
+    transform-origin: top center;
+    transition: 0.2s linear 50ms;
+    position: absolute;
+    top: 100%;
+    right: -5px;
+    border-radius: 10px;
+    width: 120px;
+  }
+
+  /*** Show menu by adding in the height! ***/
+  .menu-container:hover ul {
+    transform: scale(1, 1);
+    /* content: "\2630"; */
+    padding: 10px;
+  }
+
   .hero-message a {
     display: none;
   }
@@ -11,20 +122,6 @@
     padding: 0px;
     width: 100%;
     text-align: center;
-  }
-
-  .menu-container {
-    margin: 0px;
-    width: 100%;
-    li {
-      float: none;
-      margin: 0px;
-
-      a {
-        padding: 3px 0 6px 0;
-      }
-    }
-    padding: 0px;
   }
 }
 @media all and (max-width: 480px) {
