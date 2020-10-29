@@ -57,7 +57,7 @@
     padding-top: 3px;
   }
 }
-@media all and (max-height: 460px) {
+@media all and (max-height: 484px) {
   .timer-wrapper:before {
     height: 150px;
     background-size: 150px;
@@ -138,13 +138,32 @@
   .hero-message h2 {
     font-size: 14px;
   }
-}
 
+  .main-actions {
+    width: 100%;
+    border-radius: 0px;
+  }
+}
 @media all and (max-width: 346px) {
   .action a:before {
     bottom: 20px;
   }
 }
+@media all and (max-width: 355px) {
+  .main-actions a {
+    border-radius: 0px;
+    border: none;
+    margin: 0px;
+  }
+  .main-actions a:first-of-type {
+    margin-right: 1px;
+    border-right: 1px solid white;
+  }
+  .main-actions a:nth-of-type(2) {
+    margin-left: 0px;
+  }
+}
+
 @media all and (max-width: 280px) {
   .page-header-title {
     font-size: 20px;

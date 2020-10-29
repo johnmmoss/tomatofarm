@@ -75,6 +75,7 @@
     <Content Include="images\timer-tomato.png" />
     <Content Include="index.html" />
     <Content Include="js\timer.js" />
+    <Content Include="media\bleep-1.mp3" />
     <Content Include="styles.css" />
     <Content Include="timetracker.html" />
     <Content Include="Web.config" />

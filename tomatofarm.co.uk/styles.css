@@ -31,6 +31,7 @@ input:focus {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 10%;
 }
 
 .timer-wrapper:before {
@@ -174,11 +175,60 @@ input:focus {
   margin-right: 2%;
 }
 
+.history-page p {
+  margin-bottom: 30px;
+}
+
+.main-actions {
+  width: 95%;
+  max-width: 800px;
+  background-color: #cbe986;
+  padding: 2% 0 2% 0;
+  margin: auto auto;
+  margin-top: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.main-actions a {
+  background-color: #32b83b;
+  color: white;
+  padding: 10px 30px;
+  padding-right: 40px;
+  border: 2px solid red;
+  border-radius: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  text-decoration: none;
+  letter-spacing: 1px;
+  position: relative;
+}
+.main-actions a:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border: 20px solid transparent;
+  border-left-color: #fff;
+  border-width: 6px 10px;
+  right: 0px;
+  bottom: 13px;
+}
+
+.main-actions a:first-of-type {
+  margin-right: 3%;
+}
+
+.main-actions a:nth-of-type(2) {
+  margin-left: 3%;
+}
+
 .content {
   margin: auto auto;
   width: 95%;
   max-width: 800px;
-  margin-top: 5%;
+  margin-top: 40px;
 }
 .content ul,
 .content ol,
@@ -516,7 +566,7 @@ input:focus {
     padding-top: 3px;
   }
 }
-@media all and (max-height: 460px) {
+@media all and (max-height: 484px) {
   .timer-wrapper:before {
     height: 150px;
     background-size: 150px;
@@ -595,10 +645,31 @@ input:focus {
   .hero-message h2 {
     font-size: 14px;
   }
+
+  .main-actions {
+    width: 100%;
+    border-radius: 0px;
+  }
 }
 @media all and (max-width: 346px) {
   .action a:before {
     bottom: 20px;
+  }
+}
+@media all and (max-width: 355px) {
+  .main-actions a {
+    border-radius: 0px;
+    border: none;
+    margin: 0px;
+  }
+
+  .main-actions a:first-of-type {
+    margin-right: 1px;
+    border-right: 1px solid white;
+  }
+
+  .main-actions a:nth-of-type(2) {
+    margin-left: 0px;
   }
 }
 @media all and (max-width: 280px) {
