@@ -25,7 +25,7 @@ steps:
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
-    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.artifactStagingDirectory)"'
+    msbuildArgs : /p:DeployOnBuild=true /p:PublishProfile="api.tomatofarm.co.uk - Web Deploy.pubxml" /p:AllowUntrustedCertificate=true /p:UserName="tomatofarm" /p:Password="y)Zd6!yuv2@99O6#" 
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
     
