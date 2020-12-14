@@ -25,7 +25,7 @@ steps:
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
-    msbuildArgs : /p:DeployOnBuild=true /p:PublishProfile="api.tomatofarm.co.uk - Web Deploy.pubxml" /p:AllowUntrustedCertificate=true /p:UserName="tomatofarm" /p:Password="uY2ag2~6" 
+    msbuildArgs : /p:DeployOnBuild=true /p:PublishProfile="api.tomatofarm.co.uk - Web Deploy.pubxml" /p:AllowUntrustedCertificate=true /p:UserName="ph15507773449" /p:Password="#F79ha2a" 
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
     
