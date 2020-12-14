@@ -92,7 +92,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="api.publishsettings" />
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\api.tomatofarm.co.uk - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
