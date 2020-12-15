@@ -25,16 +25,7 @@ steps:
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
-    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.artifactStagingDirectory)" -ds'
+    msbuildArgs : '/p:DeployOnBuild=true /p:PublishProfile="api.tomatofarm.co.uk - Web Deploy.pubxml" /p:AllowUntrustedCertificate=true /p:UserName="$(ApiFtpUsername)" /p:Password="$(ApiWebDeployPassword)" -ds'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
     
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'drop'
-    publishLocation: 'Container'
-- task: VSTest@2
-  inputs:
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
