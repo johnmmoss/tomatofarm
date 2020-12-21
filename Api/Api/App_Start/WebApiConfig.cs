@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 
-namespace Api
+namespace TomatoFarm.Api
 {
     public static class WebApiConfig
     {
