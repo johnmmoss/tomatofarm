@@ -11,7 +11,7 @@ pool:
   vmImage: 'windows-latest'
 
 variables:
-  solution: 'Api\Api.sln'
+  solution: 'Api\TomatoFarm.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
