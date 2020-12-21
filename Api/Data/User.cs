@@ -5,7 +5,7 @@ namespace TomatoFarm.Data
 {
     public class User : IdentityUser
     {
-        public string StarRating { get; set; }
+        public int DefaultDuration { get; set; }
 
         public virtual ICollection<Tomato> Tomatos { get; set; }
     }
