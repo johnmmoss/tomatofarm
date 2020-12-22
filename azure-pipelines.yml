@@ -35,8 +35,8 @@ steps:
   inputs:    
     targetType: 'inline'
     script: |
-      # Write your PowerShell commands here.
-      
-      Write-Host "Hello World"#
-      
+      # Write your PowerShell commands here.      
+      Write-Host "Current Directory:"
       pwd
+      Write-Host "Current Directory Listing:"
+      ls
