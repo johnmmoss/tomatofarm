@@ -31,7 +31,8 @@ steps:
     configuration: '$(buildConfiguration)'
     
 - task: PowerShell@2
-  inputs:
+  displayName: 'migrate db'
+  inputs:    
     targetType: 'inline'
     script: |
       # Write your PowerShell commands here.
