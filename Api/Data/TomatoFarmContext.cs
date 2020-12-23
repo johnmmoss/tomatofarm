@@ -15,7 +15,8 @@ namespace TomatoFarm.Data
             public TomatoFarmContext()
                 : base("DefaultConnection")
             {
-            }
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<TomatoFarmContext, Migrations.Configuration>());
+        }
 
         }
     }
