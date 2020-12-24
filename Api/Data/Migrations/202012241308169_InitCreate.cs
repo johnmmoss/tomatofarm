@@ -1,4 +1,4 @@
-namespace TomatoFarm.Data.Migrations
+﻿namespace Data.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
@@ -11,8 +11,8 @@ namespace TomatoFarm.Data.Migrations
                 "dbo.AspNetRoles",
                 c => new
                     {
-                        Id = c.String(nullable: false, maxLength: 128, storeType: "nvarchar"),
-                        Name = c.String(nullable: false, maxLength: 256, storeType: "nvarchar"),
+                        Id = c.String(nullable: false, maxLength: 128),
+                        Name = c.String(nullable: false, maxLength: 256),
                     })
                 .PrimaryKey(t => t.Id)
                 .Index(t => t.Name, unique: true, name: "RoleNameIndex");
@@ -21,8 +21,8 @@ namespace TomatoFarm.Data.Migrations
                 "dbo.AspNetUserRoles",
                 c => new
                     {
-                        UserId = c.String(nullable: false, maxLength: 128, storeType: "nvarchar"),
-                        RoleId = c.String(nullable: false, maxLength: 128, storeType: "nvarchar"),
+                        UserId = c.String(nullable: false, maxLength: 128),
+                        RoleId = c.String(nullable: false, maxLength: 128),
                     })
                 .PrimaryKey(t => new { t.UserId, t.RoleId })
                 .ForeignKey("dbo.AspNetRoles", t => t.RoleId, cascadeDelete: true)
@@ -34,19 +34,19 @@ namespace TomatoFarm.Data.Migrations
                 "dbo.AspNetUsers",
                 c => new
                     {
-                        Id = c.String(nullable: false, maxLength: 128, storeType: "nvarchar"),
-                        StarRating = c.String(unicode: false),
-                        Email = c.String(maxLength: 256, storeType: "nvarchar"),
+                        Id = c.String(nullable: false, maxLength: 128),
+                        DefaultDuration = c.Int(nullable: false),
+                        Email = c.String(maxLength: 256),
                         EmailConfirmed = c.Boolean(nullable: false),
-                        PasswordHash = c.String(unicode: false),
-                        SecurityStamp = c.String(unicode: false),
-                        PhoneNumber = c.String(unicode: false),
+                        PasswordHash = c.String(),
+                        SecurityStamp = c.String(),
+                        PhoneNumber = c.String(),
                         PhoneNumberConfirmed = c.Boolean(nullable: false),
                         TwoFactorEnabled = c.Boolean(nullable: false),
-                        LockoutEndDateUtc = c.DateTime(precision: 0),
+                        LockoutEndDateUtc = c.DateTime(),
                         LockoutEnabled = c.Boolean(nullable: false),
                         AccessFailedCount = c.Int(nullable: false),
-                        UserName = c.String(nullable: false, maxLength: 256, storeType: "nvarchar"),
+                        UserName = c.String(nullable: false, maxLength: 256),
                     })
                 .PrimaryKey(t => t.Id)
                 .Index(t => t.UserName, unique: true, name: "UserNameIndex");
@@ -56,9 +56,9 @@ namespace TomatoFarm.Data.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        UserId = c.String(nullable: false, maxLength: 128, storeType: "nvarchar"),
-                        ClaimType = c.String(unicode: false),
-                        ClaimValue = c.String(unicode: false),
+                        UserId = c.String(nullable: false, maxLength: 128),
+                        ClaimType = c.String(),
+                        ClaimValue = c.String(),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.AspNetUsers", t => t.UserId, cascadeDelete: true)
@@ -68,9 +68,9 @@ namespace TomatoFarm.Data.Migrations
                 "dbo.AspNetUserLogins",
                 c => new
                     {
-                        LoginProvider = c.String(nullable: false, maxLength: 128, storeType: "nvarchar"),
-                        ProviderKey = c.String(nullable: false, maxLength: 128, storeType: "nvarchar"),
-                        UserId = c.String(nullable: false, maxLength: 128, storeType: "nvarchar"),
+                        LoginProvider = c.String(nullable: false, maxLength: 128),
+                        ProviderKey = c.String(nullable: false, maxLength: 128),
+                        UserId = c.String(nullable: false, maxLength: 128),
                     })
                 .PrimaryKey(t => new { t.LoginProvider, t.ProviderKey, t.UserId })
                 .ForeignKey("dbo.AspNetUsers", t => t.UserId, cascadeDelete: true)
@@ -82,10 +82,10 @@ namespace TomatoFarm.Data.Migrations
                     {
                         Id = c.Int(nullable: false, identity: true),
                         Duration = c.Int(nullable: false),
-                        StartedAt = c.DateTime(nullable: false, precision: 0),
-                        CompletedAt = c.DateTime(nullable: false, precision: 0),
-                        Notes = c.String(unicode: false),
-                        User_Id = c.String(maxLength: 128, storeType: "nvarchar"),
+                        StartedAt = c.DateTime(nullable: false),
+                        CompletedAt = c.DateTime(nullable: false),
+                        Notes = c.String(),
+                        User_Id = c.String(maxLength: 128),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.AspNetUsers", t => t.User_Id)
