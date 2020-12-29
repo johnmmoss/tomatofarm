@@ -56,12 +56,16 @@ steps:
     configuration: '$(buildConfiguration)'
     
 - task: PowerShell@2
-  displayName: 'migrate db'
+  displayName: 'Update Database'
   inputs:    
     targetType: 'inline'
     script: |
-      # Write your PowerShell commands here.      
-      Write-Host "Current Directory:"
-      pwd
-      Write-Host "Current Directory Listing:"
-      ls
+      $response = Invoke-RestMethod -Uri "http://api.tomatofarm.co.uk/api/home/migrate" -ContentType "application/json"
+      if ($response -ne "done" )
+      {
+          write-error "Error migrating database"
+          write-host $response
+      } else {
+
+          write-host "Database migrated successfully!"
+      }
