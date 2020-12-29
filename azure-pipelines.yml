@@ -35,7 +35,7 @@ steps:
               
               $connectionString = "Server=$server;Database=$database;User Id=$username;Password=$password;" 
               
-              $webConfig = $(Build.SourcesDirectory) + "\Api\Api\Web.Config"
+              $webConfig = "$(Build.SourcesDirectory)" + "\Api\Api\Web.Config"
               
               write-host Updating Web.config....
               write-host "CONNECTION STRING" + $connectionString
