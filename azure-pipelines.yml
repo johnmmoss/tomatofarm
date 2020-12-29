@@ -23,6 +23,31 @@ steps:
   inputs:
     restoreSolution: '$(solution)'
 
+- task: PowerShell@2
+  displayName: 'Update web.config'
+  inputs:
+    targetType: 'inline'
+    script: |
+      $server = "127.0.0.1"
+              $database = "TomatoFarm123"
+              $username ="use12356"
+              $password = "pAssWord!"
+              
+              $connectionString = "Server=$server;Database=$database;User Id=$username;Password=$password;" 
+              
+              $webConfig = "$(Build.SourcesDirectory)" + "\Api\Api\Web.Config"
+              
+              write-host Updating Web.config....
+              write-host "CONNECTION STRING" + $connectionString
+              write-host "Web.config path:" + $webConfig
+              
+              $xml = New-Object xml
+              $xml.PreserveWhitespace = $true
+              $xml.Load($webConfig)
+              $xml.configuration.connectionStrings.add.connectionString = $connectionString
+              $xml.Save($webConfig)
+      
+
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
