@@ -31,7 +31,7 @@ steps:
       $server = "$(SqlServer)"
               $database = "$(SqlDatabaseName)"
               $username ="$(SqlUserName)"
-              $password = "pAssWord!"
+              $password = "$(SqlPassword)"
               
               $connectionString = "Server=$server;Database=$database;User Id=$username;Password=$password;" 
               
