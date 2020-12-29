@@ -29,23 +29,23 @@ steps:
     targetType: 'inline'
     script: |
       $server = "$(SqlServer)"
-              $database = "$(SqlDatabaseName)"
-              $username ="$(SqlUserName)"
-              $password = "$(SqlPassword)"
-              
-              $connectionString = "Server=$server;Database=$database;User Id=$username;Password=$password;" 
-              
-              $webConfig = "$(Build.SourcesDirectory)" + "\Api\Api\Web.Config"
-              
-              write-host Updating Web.config....
-              write-host "CONNECTION STRING" + $connectionString
-              write-host "Web.config path:" + $webConfig
-              
-              $xml = New-Object xml
-              $xml.PreserveWhitespace = $true
-              $xml.Load($webConfig)
-              $xml.configuration.connectionStrings.add.connectionString = $connectionString
-              $xml.Save($webConfig)
+      $database = "$(SqlDatabaseName)"
+      $username ="$(SqlUserName)"
+      $password = "$(SqlPassword)"
+      
+      $connectionString = "Server=$server;Database=$database;User Id=$username;Password=$password;" 
+      
+      $webConfig = "$(Build.SourcesDirectory)" + "\Api\Api\Web.Config"
+      
+      write-host Updating Web.config....
+      write-host "CONNECTION STRING" + $connectionString
+      write-host "Web.config path:" + $webConfig
+      
+      $xml = New-Object xml
+      $xml.PreserveWhitespace = $true
+      $xml.Load($webConfig)
+      $xml.configuration.connectionStrings.add.connectionString = $connectionString
+      $xml.Save($webConfig)
       
 
 - task: VSBuild@1
