@@ -28,9 +28,9 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      $server = "127.0.0.1"
-              $database = "TomatoFarm123"
-              $username ="use12356"
+      $server = "$(SqlServer)"
+              $database = "$(SqlDatabaseName)"
+              $username ="$(SqlUser)"
               $password = "pAssWord!"
               
               $connectionString = "Server=$server;Database=$database;User Id=$username;Password=$password;" 
