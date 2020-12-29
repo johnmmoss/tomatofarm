@@ -1,4 +1,4 @@
-﻿namespace Data.Migrations
+﻿namespace TomatoFarm.Data.Migrations
 {
     using System;
     using System.Data.Entity;
@@ -9,7 +9,7 @@
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(TomatoFarm.Data.TomatoFarmContext context)
