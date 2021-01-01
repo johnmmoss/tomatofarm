@@ -23,7 +23,7 @@ namespace TomatoFarm.Api.Controllers
             }
         }
 
-        [Route("create")]
+        [Route("register")]
         public async Task<IHttpActionResult> CreateUser(AccountCreateRequest accountCreateRequest)
         {
             if (!ModelState.IsValid)
@@ -54,6 +54,7 @@ namespace TomatoFarm.Api.Controllers
             return Created(locationHeader, response);
         }
 
+        [Authorize]
         [Route("users", Name = "GetUsers")]
         public IHttpActionResult GetUsers()
         {
@@ -62,6 +63,7 @@ namespace TomatoFarm.Api.Controllers
             return Ok(response);
         }
 
+        [Authorize]
         [Route("users/{id:guid}", Name = "GetUserById")]
         public async Task<IHttpActionResult> GetUser(string Id)
         {
@@ -78,6 +80,7 @@ namespace TomatoFarm.Api.Controllers
 
         }
 
+        [Authorize]
         [Route("users/{email}", Name = "GetUserByEmail")]
         public async Task<IHttpActionResult> GetUserByName(string email)
         {
